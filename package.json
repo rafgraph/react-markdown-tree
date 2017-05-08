@@ -1,0 +1,44 @@
+{
+  "private": true,
+  "name": "some-component",
+  "version": "0.0.0",
+  "description": "Some component",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "npm run build-lib && npm run build-dist",
+    "build-lib": "rm -rf lib && babel src -d lib",
+    "build-dist": "rm -rf dist && webpack src/index.js dist/SomeComponent.js && webpack -p src/index.js dist/SomeComponent.min.js",
+    "prepublish": "npm run build",
+    "dev": "npm link && babel src -d lib --watch"
+  },
+  "files": [
+    "dist",
+    "lib",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafrex/react-component-dev.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Rafael Pedicini <code@rafrex.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rafrex/react-component-dev/issues"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^2.5.0"
+  }
+}
