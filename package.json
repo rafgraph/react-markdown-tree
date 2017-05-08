@@ -1,16 +1,16 @@
 {
   "private": true,
-  "name": "some-component-example",
-  "description": "Example site for Some Component",
+  "name": "react-markdown-tree",
+  "description": "Example site for React Markdown Tree",
   "scripts": {
-    "start-local": "npm link some-component && npm start",
+    "start-local": "npm link react-markdown-tree && npm start",
     "start": "webpack-dev-server --devtool eval-source-map --host 0.0.0.0 --public 10.0.1.4:8080 --history-api-fallback --open",
-    "unlink": "npm unlink some-component && npm install --save some-component",
+    "unlink": "npm unlink react-markdown-tree && npm install --save react-markdown-tree",
     "build": "npm run unlink && webpack -p"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rafrex/react-component-dev.git"
+    "url": "git+https://github.com/rafrex/react-markdown-tree.git"
   },
   "author": "Rafael Pedicini <code@rafrex.com>",
   "license": "MIT",
