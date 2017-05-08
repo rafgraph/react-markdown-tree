@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "name": "some-component-example",
+  "description": "Example site for Some Component",
+  "scripts": {
+    "start-local": "npm link some-component && npm start",
+    "start": "webpack-dev-server --devtool eval-source-map --host 0.0.0.0 --public 10.0.1.4:8080 --history-api-fallback --open",
+    "unlink": "npm unlink some-component && npm install --save some-component",
+    "build": "npm run unlink && webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafrex/react-component-dev.git"
+  },
+  "author": "Rafael Pedicini <code@rafrex.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^2.5.0",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
