@@ -1,13 +1,13 @@
 {
   "private": true,
-  "name": "some-component",
+  "name": "react-markdown-tree",
   "version": "0.0.0",
-  "description": "Some component",
+  "description": "Markdown provider and component for React",
   "main": "lib/index.js",
   "scripts": {
     "build": "npm run build-lib && npm run build-dist",
     "build-lib": "rm -rf lib && babel src -d lib",
-    "build-dist": "rm -rf dist && webpack src/index.js dist/SomeComponent.js && webpack -p src/index.js dist/SomeComponent.min.js",
+    "build-dist": "rm -rf dist && webpack src/index.js dist/ReactMarkdownTree.js && webpack -p src/index.js dist/ReactMarkdownTree.min.js",
     "prepublish": "npm run build",
     "dev": "npm link && babel src -d lib --watch"
   },
@@ -18,7 +18,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rafrex/react-component-dev.git"
+    "url": "git+https://github.com/rafrex/react-markdown-tree.git"
   },
   "keywords": [
     "react"
@@ -26,7 +26,7 @@
   "author": "Rafael Pedicini <code@rafrex.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rafrex/react-component-dev/issues"
+    "url": "https://github.com/rafrex/react-markdown-tree/issues"
   },
   "peerDependencies": {
     "react": "^15.0.0"
