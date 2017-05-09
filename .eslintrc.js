@@ -3,11 +3,14 @@ module.exports = {
   parser: 'babel-eslint',
   env: {
     browser: true,
+    node: true,
   },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:import/errors',
+    'prettier',
+    'prettier/react',
   ],
   parserOptions: {
     ecmaVersion: 2017,
@@ -17,11 +20,9 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: [
-    'react',
-    'import',
-  ],
+  plugins: ['react', 'import', 'prettier'],
   rules: {
     'import/no-unresolved': ['error', { ignore: ['^react$'] }], // because React is a peer dependency
-  }
+    'prettier/prettier': ['warn', { trailingComma: 'all', singleQuote: true }],
+  },
 };
