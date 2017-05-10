@@ -3,10 +3,10 @@
   "name": "react-markdown-tree",
   "description": "Example site for React Markdown Tree",
   "scripts": {
-    "start-local": "npm link react-markdown-tree && npm start",
+    "start-local": "yarn link react-markdown-tree && yarn start",
     "start": "webpack-dev-server --devtool eval-source-map --host 0.0.0.0 --public 10.0.1.4:8080 --history-api-fallback --open",
-    "unlink": "npm unlink react-markdown-tree && npm install --save react-markdown-tree",
-    "build": "npm run unlink && webpack -p",
+    "unlink": "yarn unlink react-markdown-tree && yarn add react-markdown-tree",
+    "build": "yarn run unlink && webpack -p",
     "postinstall": "flow-typed install"
   },
   "repository": {
