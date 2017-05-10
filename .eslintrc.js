@@ -9,6 +9,8 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:import/errors',
+    'prettier',
+    'prettier/react',
   ],
   parserOptions: {
     ecmaVersion: 2017,
@@ -18,8 +20,8 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: [
-    'react',
-    'import',
-  ]
+  plugins: ['react', 'import', 'prettier'],
+  rules: {
+    'prettier/prettier': ['warn', { trailingComma: 'all', singleQuote: true }],
+  },
 };
