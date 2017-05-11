@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Parser } from 'commonmark';
 import ReactRenderer from 'commonmark-react-renderer';
+import warning from 'warning';
 
 export default class MarkdownProvider extends React.Component {
   props: {
@@ -38,6 +39,13 @@ export default class MarkdownProvider extends React.Component {
     ...MarkdownProvider.rendererConfig,
     renderers: this.props.config,
   });
+
+  componentWillReceiveProps(nextProps: { config: {} }) {
+    warning(
+      this.props.config === nextProps.config,
+      'You cannot change the MarkdownProvider config',
+    );
+  }
 
   getChildContext() {
     return {

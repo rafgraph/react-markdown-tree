@@ -37,6 +37,7 @@
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.0.0",
     "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-dev-expression": "^0.2.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-env": "^1.4.0",
@@ -57,6 +58,7 @@
   "dependencies": {
     "commonmark": "^0.27.0",
     "commonmark-react-renderer": "^4.3.2",
-    "prop-types": "^15.5.9"
+    "prop-types": "^15.5.9",
+    "warning": "^3.0.0"
   }
 }
