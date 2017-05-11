@@ -4,6 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>React Markdown Tree</title>
+
+    <style>
+      html, body {
+        margin: 0;
+        border: 0;
+        padding: 0;
+      }
+      /*pass window height (w/o scroll bars) down to react app, note can't use vh becasue that
+      includes scroll bars and mobile browser footer, etc so doesn't give viewable area*/
+      html, body, #root { height: 100%; }
+      html { background-color: rgb(0, 120, 0); }
+    </style>
+
   </head>
   <body>
     <div id="root"></div>
