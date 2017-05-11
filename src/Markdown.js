@@ -5,14 +5,17 @@ import PropTypes from 'prop-types';
 export default class Markdown extends React.PureComponent {
   props: {
     children: string,
+    as: string | Function,
   };
 
   static propTypes = {
     children: PropTypes.string,
+    as: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   };
 
   static defaultProps = {
     children: null,
+    as: 'div',
   };
 
   static contextTypes = {
@@ -27,12 +30,14 @@ export default class Markdown extends React.PureComponent {
 
   render() {
     if (this.props.children === null) return null;
-    const ast = this.parseMarkdown(this.props.children);
+    const { as, children, ...rest } = this.props;
+    const ast = this.parseMarkdown(children);
     const renderedMarkdown = this.renderMarkdown(ast);
+    const As = as;
     return (
-      <div style={{ border: '1px solid black' }}>
+      <As {...rest}>
         {renderedMarkdown}
-      </div>
+      </As>
     );
   }
 }
