@@ -26,8 +26,18 @@ export default class MarkdownProvider extends React.Component {
     }).isRequired,
   };
 
+  static rendererConfig = {
+    sourcePos: false,
+    escapeHtml: true,
+    skipHtml: false,
+    softBreak: '\n',
+  };
+
   parser = new Parser();
-  renderer = new ReactRenderer(this.props.config);
+  renderer = new ReactRenderer({
+    ...MarkdownProvider.rendererConfig,
+    renderers: this.props.config,
+  });
 
   getChildContext() {
     return {
