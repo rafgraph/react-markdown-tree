@@ -21,17 +21,15 @@ export default class MarkdownInput extends React.PureComponent {
       MozBoxShawdow: 'none',
       borderRadius: '0',
     };
+
     if (this.props.layout === 'horizontal') {
-      style.width = '50%';
+      style.width = 'calc(50% - 3px)';
       style.height = '100%';
-      style.borderRightWidth = '3px';
-      style.borderBottomWidth = '0px';
     } else {
       style.width = '100%';
-      style.height = '50%';
-      style.borderBottomWidth = '3px';
-      style.borderRightWidth = '0px';
+      style.height = 'calc(50% - 3px)';
     }
+
     return (
       <textarea
         style={style}

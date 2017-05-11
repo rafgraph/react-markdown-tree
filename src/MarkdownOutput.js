@@ -12,17 +12,15 @@ export default class MarkdownOutput extends React.PureComponent {
     const style = {
       ...this.props.style,
     };
+
     if (this.props.layout === 'horizontal') {
-      style.width = '50%';
+      style.width = 'calc(50% - 3px)';
       style.height = '100%';
-      style.borderLeftWidth = '3px';
-      style.borderTopWidth = '0px';
     } else {
       style.width = '100%';
-      style.height = '50%';
-      style.borderTopWidth = '3px';
-      style.borderLeftWidth = '0px';
+      style.height = 'calc(50% - 3px)';
     }
+
     return (
       <Markdown style={style}>
         {this.props.text}

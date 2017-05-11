@@ -4,9 +4,7 @@ import MarkdownInput from './MarkdownInput';
 import MarkdownOutput from './MarkdownOutput';
 
 const textBoxStyle = {
-  borderWidth: '0px',
-  borderColor: 'rgb(0, 120, 0)',
-  borderStyle: 'solid',
+  border: 'none',
   boxSizing: 'border-box',
   margin: '0',
   padding: '10px',
@@ -47,11 +45,11 @@ export default class App extends React.Component {
   };
 
   render() {
-    console.log(this.state.layout);
     return (
       <div
         style={{
           display: 'flex',
+          justifyContent: 'space-between',
           flexDirection: this.state.layout === 'horizontal' ? 'row' : 'column',
           height: '100%',
           width: '100%',
