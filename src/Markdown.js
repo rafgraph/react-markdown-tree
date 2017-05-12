@@ -19,24 +19,18 @@ export default class Markdown extends React.PureComponent {
   };
 
   static contextTypes = {
-    reactMarkdownTree: PropTypes.shape({
-      parseMarkdown: PropTypes.func.isRequired,
-      renderMarkdown: PropTypes.func.isRequired,
-    }).isRequired,
+    renderMarkdown: PropTypes.func.isRequired,
   };
 
-  parseMarkdown = this.context.reactMarkdownTree.parseMarkdown;
-  renderMarkdown = this.context.reactMarkdownTree.renderMarkdown;
+  renderMarkdown = this.context.renderMarkdown;
 
   render() {
     if (this.props.children === null) return null;
     const { as, children, ...rest } = this.props;
-    const ast = this.parseMarkdown(children);
-    const renderedMarkdown = this.renderMarkdown(ast);
     const As = as;
     return (
       <As {...rest}>
-        {renderedMarkdown}
+        {this.renderMarkdown(children)}
       </As>
     );
   }

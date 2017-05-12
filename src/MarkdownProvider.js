@@ -21,10 +21,7 @@ export default class MarkdownProvider extends React.Component {
   };
 
   static childContextTypes = {
-    reactMarkdownTree: PropTypes.shape({
-      parseMarkdown: PropTypes.func.isRequired,
-      renderMarkdown: PropTypes.func.isRequired,
-    }).isRequired,
+    renderMarkdown: PropTypes.func.isRequired,
   };
 
   static rendererConfig = {
@@ -40,6 +37,10 @@ export default class MarkdownProvider extends React.Component {
     renderers: this.props.config,
   });
 
+  // the parser returns an abstract syntax tree (ast), that the renderer renders
+  renderMarkdown = (source: string) =>
+    this.renderer.render(this.parser.parse(source));
+
   componentWillReceiveProps(nextProps: { config: {} }) {
     warning(
       this.props.config === nextProps.config,
@@ -49,10 +50,7 @@ export default class MarkdownProvider extends React.Component {
 
   getChildContext() {
     return {
-      reactMarkdownTree: {
-        parseMarkdown: this.parser.parse.bind(this.parser),
-        renderMarkdown: this.renderer.render.bind(this.renderer),
-      },
+      renderMarkdown: this.renderMarkdown,
     };
   }
 
