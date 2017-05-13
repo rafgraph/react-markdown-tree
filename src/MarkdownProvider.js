@@ -24,6 +24,8 @@ export default class MarkdownProvider extends React.Component {
     renderMarkdown: PropTypes.func.isRequired,
   };
 
+  static parser = new Parser();
+
   static rendererConfig = {
     sourcePos: false,
     escapeHtml: true,
@@ -31,7 +33,6 @@ export default class MarkdownProvider extends React.Component {
     softBreak: '\n',
   };
 
-  parser = new Parser();
   renderer = new ReactRenderer({
     ...MarkdownProvider.rendererConfig,
     renderers: this.props.config,
@@ -39,7 +40,7 @@ export default class MarkdownProvider extends React.Component {
 
   // the parser returns an abstract syntax tree (ast), that the renderer renders
   renderMarkdown = (source: string): Array<React$Element<any>> =>
-    this.renderer.render(this.parser.parse(source));
+    this.renderer.render(MarkdownProvider.parser.parse(source));
 
   componentWillReceiveProps(nextProps: { config: {} }) {
     warning(
