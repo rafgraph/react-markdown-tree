@@ -44,7 +44,12 @@ export default class MarkdownProvider extends React.Component {
 
   componentWillReceiveProps(nextProps: { config: {} }) {
     warning(
-      this.props.config === nextProps.config,
+      this.props.config === nextProps.config &&
+        Object.keys(nextProps.config).length ===
+          Object.keys(this.props.config).length &&
+        Object.keys(nextProps.config).every(
+          key => this.props.config[key] === nextProps.config[key],
+        ),
       'You cannot change the MarkdownProvider config',
     );
   }
