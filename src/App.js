@@ -24,12 +24,20 @@ export default class App extends React.Component {
   } = window.matchMedia('(min-aspect-ratio: 1/1)');
 
   state = {
-    text: '',
+    text: '# Loading...',
     layout: this.determineLayout(this.aspectRatioMql),
   };
 
   componentDidMount() {
     this.aspectRatioMql.addListener(this.updateLayout);
+
+    const _this = this;
+    const request = new XMLHttpRequest();
+    request.addEventListener('load', function() {
+      _this.updateInput(this.responseText);
+    });
+    request.open('GET', '/markdown/example-markdown.md', true);
+    request.send();
   }
 
   componentWillUnmount() {
