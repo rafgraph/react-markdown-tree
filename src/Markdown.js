@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 export default class Markdown extends React.PureComponent {
   props: {
-    children: string,
+    children: string | null,
     as: string | Function,
   };
 

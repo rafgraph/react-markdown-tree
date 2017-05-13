@@ -38,7 +38,7 @@ export default class MarkdownProvider extends React.Component {
   });
 
   // the parser returns an abstract syntax tree (ast), that the renderer renders
-  renderMarkdown = (source: string) =>
+  renderMarkdown = (source: string): Array<React$Element<any>> =>
     this.renderer.render(this.parser.parse(source));
 
   componentWillReceiveProps(nextProps: { config: {} }) {
