@@ -22,15 +22,13 @@ export default class Markdown extends React.PureComponent {
     renderMarkdown: PropTypes.func.isRequired,
   };
 
-  renderMarkdown = this.context.renderMarkdown;
-
   render() {
     if (this.props.children === null) return null;
     const { as, children, ...rest } = this.props;
     const As = as;
     return (
       <As {...rest}>
-        {this.renderMarkdown(children)}
+        {this.context.renderMarkdown(children)}
       </As>
     );
   }
