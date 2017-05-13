@@ -5,6 +5,7 @@
     "flow"
   ],
   "plugins": [
+    "dev-expression",
     "transform-class-properties",
     "transform-object-rest-spread",
     "add-module-exports"
