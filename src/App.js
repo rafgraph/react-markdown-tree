@@ -36,6 +36,12 @@ export default class App extends React.Component {
     request.addEventListener('load', function() {
       _this.updateInput(this.responseText);
     });
+    request.addEventListener('error', () => {
+      this.updateInput(
+        '### An error occurred while loading the example markdown content, ' +
+          'but you can still edit this content or refresh the page to try again.',
+      );
+    });
     request.open('GET', '/markdown/example-markdown.md', true);
     request.send();
   }
