@@ -1,2 +1,81 @@
 # React Markdown Tree
-[https://github.com/rafrex/react-markdown-tree](https://github.com/rafrex/react-markdown-tree)
+[https://github.com/rafrex/react-markdown-tree](https://github.com/rafrex/react-markdown-tree 'GitHub Repo for React Markdown Tree')
+
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+
+This is a paragraph of hipster text. Microdosing godard organic listicle kitsch, kale chips narwhal tousled jean shorts lumbersexual bespoke skateboard tacos swag. Church-key vinyl butcher austin leggings. Flannel hot chicken hexagon hella +1. Live-edge 8-bit glossier, butcher cardigan vinyl cold-pressed venmo. Meh letterpress XOXO lyft artisan af. Affogato woke microdosing jean shorts, polaroid XOXO enamel pin organic air plant taxidermy lo-fi fashion axe venmo. Offal pabst vape slow-carb.
+
+[This is a link to `react-markdown-tree-config-default` that's used to render tihs page.](https://github.com/rafrex/react-markdown-tree-config-default 'GitHub Repo for React Markdown Tree Config Default')
+
+Here's an image:
+![React Logo](/imgs/react-logo.svg 'React Logo')
+
+1. This is an ordered list starting at 1
+1. This is item 2
+1. This is item 3
+
+- This is an unordered list
+- This is an item
+  - This is a sub-list item
+    - This is a sub-sub-list item
+- This is another item
+
+42. This is an ordered list starting at 42
+1. This is item 43
+1. This is item 44
+
+> This is a blockquote
+>> This is a double blockquote
+
+*This has emphasis*
+
+**This is strong**
+
+***This is strong with emphasis***
+
+This is a soft
+break
+
+This is a line break, it has 2 spaces at the end of this line  
+followed by a new line
+
+---
+Above is a thematic break
+
+This is some `inline code` in the middle of text.
+
+```js
+// this is a code block
+import React from 'react';
+import { MarkdownProvider, Markdown } from 'react-markdown-tree';
+import markdownConfig from 'react-markdown-tree-config-default';
+
+class App extends React.Component {
+  render() {
+    return (
+      <MarkdownProvider config={markdownConfig}>
+        <MyComponent />
+      </MarkdownProvider>
+    );
+  }
+}
+
+function MyComponent() {
+  return (
+    <Markdown>
+      # This is a Heading
+    </Markdown>
+  )l;
+}
+
+```
+
+
+Code and concept by [Rafael Pedicini](http://www.rafaelpedicini.com)
+
+[React Markdown Tree](https://github.com/rafrex/react-markdown-tree) is powered by [CommonMark](https://github.com/jgm/CommonMark/) and [CommonMark React Renderer](https://github.com/rexxars/commonmark-react-renderer)
