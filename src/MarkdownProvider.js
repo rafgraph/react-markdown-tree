@@ -8,7 +8,7 @@ import warning from 'warning';
 export default class MarkdownProvider extends React.Component {
   props: {
     children?: any,
-    config: { containerProps: {} },
+    config: { containerProps: {}, renderers: {} },
   };
 
   static propTypes = {
@@ -38,25 +38,30 @@ export default class MarkdownProvider extends React.Component {
 
   renderer = new ReactRenderer({
     ...MarkdownProvider.rendererConfig,
-    renderers: (() => {
-      const renderers = { ...this.props.config };
-      delete renderers.containerProps;
-      return renderers;
-    })(),
+    renderers: this.props.config.renderers,
   });
 
   // the parser returns an abstract syntax tree (ast), that the renderer renders
   renderMarkdown = (source: string): Array<React$Element<any>> =>
     this.renderer.render(MarkdownProvider.parser.parse(source));
 
-  componentWillReceiveProps(nextProps: { config: { containerProps: {} } }) {
+  componentWillReceiveProps(nextProps: {
+    config: { containerProps: {}, renderers: {} },
+  }) {
     warning(
       this.props.config === nextProps.config &&
-        Object.keys(nextProps.config).length ===
-          Object.keys(this.props.config).length &&
-        Object.keys(nextProps.config).every(
-          key => this.props.config[key] === nextProps.config[key],
-        ),
+        (!this.props.config ||
+          (this.props.config.containerProps ===
+            nextProps.config.containerProps &&
+            this.props.config.renderers === nextProps.config.renderers &&
+            (!this.props.config.renderers ||
+              (Object.keys(nextProps.config.renderers).length ===
+                Object.keys(this.props.config.renderers).length &&
+                Object.keys(nextProps.config.renderers).every(
+                  key =>
+                    this.props.config.renderers[key] ===
+                    nextProps.config.renderers[key],
+                ))))),
       'You cannot change the MarkdownProvider config',
     );
   }
@@ -65,7 +70,10 @@ export default class MarkdownProvider extends React.Component {
     return {
       reactMarkdownTree: {
         renderMarkdown: this.renderMarkdown,
-        containerProps: this.props.config.containerProps || {},
+        containerProps: {
+          as: 'div',
+          ...this.props.config.containerProps,
+        },
       },
     };
   }
