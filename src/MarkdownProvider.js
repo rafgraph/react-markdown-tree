@@ -8,7 +8,7 @@ import warning from 'warning';
 export default class MarkdownProvider extends React.Component {
   props: {
     children?: any,
-    config: {},
+    config: { containerProps: {} },
   };
 
   static propTypes = {
@@ -21,7 +21,10 @@ export default class MarkdownProvider extends React.Component {
   };
 
   static childContextTypes = {
-    renderMarkdown: PropTypes.func.isRequired,
+    reactMarkdownTree: PropTypes.shape({
+      renderMarkdown: PropTypes.func.isRequired,
+      containerProps: PropTypes.object,
+    }).isRequired,
   };
 
   static parser = new Parser();
@@ -35,14 +38,18 @@ export default class MarkdownProvider extends React.Component {
 
   renderer = new ReactRenderer({
     ...MarkdownProvider.rendererConfig,
-    renderers: this.props.config,
+    renderers: (() => {
+      const renderers = { ...this.props.config };
+      delete renderers.containerProps;
+      return renderers;
+    })(),
   });
 
   // the parser returns an abstract syntax tree (ast), that the renderer renders
   renderMarkdown = (source: string): Array<React$Element<any>> =>
     this.renderer.render(MarkdownProvider.parser.parse(source));
 
-  componentWillReceiveProps(nextProps: { config: {} }) {
+  componentWillReceiveProps(nextProps: { config: { containerProps: {} } }) {
     warning(
       this.props.config === nextProps.config &&
         Object.keys(nextProps.config).length ===
@@ -56,7 +63,10 @@ export default class MarkdownProvider extends React.Component {
 
   getChildContext() {
     return {
-      renderMarkdown: this.renderMarkdown,
+      reactMarkdownTree: {
+        renderMarkdown: this.renderMarkdown,
+        containerProps: this.props.config.containerProps || {},
+      },
     };
   }
 
