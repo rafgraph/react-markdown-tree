@@ -7,7 +7,7 @@
   "scripts": {
     "build": "yarn run build-lib && yarn run build-dist",
     "build-lib": "rm -rf lib && babel src -d lib && flow-copy-source src lib",
-    "build-dist": "rm -rf dist && webpack src/index.js dist/ReactMarkdownTree.js && webpack -p src/index.js dist/ReactMarkdownTree.min.js",
+    "build-dist": "rm -rf dist && webpack src/index.js dist/react-markdown-tree.js && webpack -p src/index.js dist/react-markdown-tree.min.js",
     "prepublish": "yarn run build",
     "dev": "yarn link && babel src -d lib --watch & yarn watch \"flow-copy-source src lib\" src",
     "postinstall": "flow-typed install"
