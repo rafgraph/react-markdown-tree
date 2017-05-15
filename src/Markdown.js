@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 export default class Markdown extends React.PureComponent {
   props: {
     children: string | null,
-    as: string | Function,
+    as?: string | Function,
   };
 
   static propTypes = {
@@ -15,12 +15,13 @@ export default class Markdown extends React.PureComponent {
 
   static defaultProps = {
     children: null,
+    // as: 'div' default prop is passed down from <MarkdownProvider />
   };
 
   static contextTypes = {
     reactMarkdownTree: PropTypes.shape({
       renderMarkdown: PropTypes.func.isRequired,
-      containerProps: PropTypes.object,
+      containerProps: PropTypes.object.isRequired,
     }).isRequired,
   };
 
