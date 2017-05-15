@@ -69,9 +69,6 @@ break
 This is a line break, it has 2 spaces at the end of this line  
 followed by a new line
 
----
-Above is a thematic break
-
 This is some `inline code` in the middle of text.
 
 ```js
@@ -100,6 +97,9 @@ function MyComponent() {
 
 ```
 
+Below is a thematic break
+
+---
 
 Code and concept by [Rafael Pedicini](http://www.rafaelpedicini.com)
 
