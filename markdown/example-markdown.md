@@ -23,11 +23,15 @@ Here's an image:
 - This is an item
   - This is a sub-list item
     - This is a sub-sub-list item
+    - Another item
 - This is another item
 
 42. This is an ordered list starting at 42
 1. This is item 43
 1. This is item 44
+    - This is a sub-list of 44
+    - Another item
+1. This is item 45
 
 > This is a blockquote
 >> This is a double blockquote
