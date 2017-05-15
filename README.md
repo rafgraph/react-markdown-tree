@@ -50,6 +50,15 @@ render() {
 }
 ```
 
+You can also use the UMD build that's available from Unpkg:
+```html
+<!-- Available at window.ReactMarkdownTree -->
+<script src="https://unpkg.com/react-markdown-tree/dist/react-markdown-tree.min.js"></script>
+
+<!-- Available at window.ReactMarkdownTreeConfigDefault -->
+<script src="https://unpkg.com/react-markdown-tree-config-default/dist/react-markdown-tree-config-default.min.js"></script>
+```
+
 ## API
 
 ### `<Markdown>`
