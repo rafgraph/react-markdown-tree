@@ -78,4 +78,4 @@ function MyComponent() {
 
 Code and concept by [Rafael Pedicini](http://www.rafaelpedicini.com)
 
-[React Markdown Tree](https://github.com/rafrex/react-markdown-tree) is powered by [CommonMark](https://github.com/jgm/CommonMark/) and [CommonMark React Renderer](https://github.com/rexxars/commonmark-react-renderer)
+[React Markdown Tree](https://github.com/rafrex/react-markdown-tree) is powered by [CommonMark JS](https://github.com/jgm/commonmark.js) and [CommonMark React Renderer](https://github.com/rexxars/commonmark-react-renderer)
