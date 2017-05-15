@@ -10,7 +10,7 @@
 
 This is a paragraph of hipster text. Microdosing godard organic listicle kitsch, kale chips narwhal tousled jean shorts lumbersexual bespoke skateboard tacos swag. Church-key vinyl butcher austin leggings. Flannel hot chicken hexagon hella +1. Live-edge 8-bit glossier, butcher cardigan vinyl cold-pressed venmo. Meh letterpress XOXO lyft artisan af. Affogato woke microdosing jean shorts, polaroid XOXO enamel pin organic air plant taxidermy lo-fi fashion axe venmo. Offal pabst vape slow-carb.
 
-[This is a link to `react-markdown-tree-config-default` that's used to render tihs page.](https://github.com/rafrex/react-markdown-tree-config-default 'GitHub Repo for React Markdown Tree Config Default')
+[This is a link to `react-markdown-tree-config-default` that's used to render this page.](https://github.com/rafrex/react-markdown-tree-config-default 'GitHub Repo for React Markdown Tree Config Default')
 
 Here's an image:
 ![React Logo](/imgs/react-logo.svg 'React Logo')
