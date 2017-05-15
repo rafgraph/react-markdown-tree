@@ -33,8 +33,29 @@ Here's an image:
     - Another item
 1. This is item 45
 
-> This is a blockquote
->> This is a double blockquote
+> ### This is a BlockQuote
+>
+> This is a paragraph of hipster text. Microdosing godard organic listicle kitsch, kale chips narwhal tousled jean shorts lumbersexual bespoke skateboard tacos swag. Church-key vinyl butcher austin leggings. Flannel hot chicken hexagon hella +1.
+>
+> - List item
+>
+> This is a [link to GitHub](https://github.com)
+>> This is a double BlockQuote
+>>> This is a triple BlockQuote
+>
+> This is `inline code`
+>
+> ```js
+> // this is a js code block in a blockquote
+> function MyComponent() {
+>   return (
+>     <Markdown>
+>       # This is a Heading
+>     </Markdown>
+>   );
+> }
+> ```
+>
 
 *This has emphasis*
 
@@ -74,7 +95,7 @@ function MyComponent() {
     <Markdown>
       # This is a Heading
     </Markdown>
-  )l;
+  );
 }
 
 ```
