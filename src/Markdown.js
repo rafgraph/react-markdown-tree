@@ -15,7 +15,7 @@ export default class Markdown extends React.PureComponent {
 
   static defaultProps = {
     children: null,
-    // as: 'div' default prop is passed down from <MarkdownProvider />
+    // as: 'div' default prop is passed down from <MarkdownProvider>
   };
 
   static contextTypes = {

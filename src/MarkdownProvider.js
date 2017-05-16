@@ -45,7 +45,7 @@ export default class MarkdownProvider extends React.Component {
   renderMarkdown = (source: string): Array<React$Element<any>> =>
     this.renderer.render(MarkdownProvider.parser.parse(source));
 
-  // props passed down to every instance of <Markdown />
+  // props passed down to every instance of <Markdown>
   containerProps = {
     as: 'div',
     ...this.props.config.containerProps,
