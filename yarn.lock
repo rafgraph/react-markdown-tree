@@ -3048,9 +3048,9 @@ react-markdown-tree-config-default@^0.3.0:
   dependencies:
     react-interactive "^0.6.5"
 
-react-markdown-tree@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/react-markdown-tree/-/react-markdown-tree-0.1.1.tgz#c5953f35400b8de2b9a2a6fd1996f993ee97ff3c"
+react-markdown-tree@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-markdown-tree/-/react-markdown-tree-1.0.0.tgz#8387e310b4e4d3a17cb5c3928e01432da2c4bdd4"
   dependencies:
     commonmark "^0.27.0"
     commonmark-react-renderer "^4.3.2"

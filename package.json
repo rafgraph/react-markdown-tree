@@ -18,7 +18,7 @@
   "dependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "react-markdown-tree": "^0.1.1",
+    "react-markdown-tree": "^1.0.0",
     "react-markdown-tree-config-default": "^0.3.0"
   },
   "devDependencies": {
