@@ -3046,9 +3046,9 @@ react-interactive@^0.6.5:
     object-assign "^4.1.1"
     prop-types "^15.5.8"
 
-react-markdown-tree-config-default@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/react-markdown-tree-config-default/-/react-markdown-tree-config-default-0.1.1.tgz#edc215a40198c04a81ffd6663a0a3cc65baee150"
+react-markdown-tree-config-default@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/react-markdown-tree-config-default/-/react-markdown-tree-config-default-0.2.0.tgz#f5c6725ba13ad8a57d70920eacade4d3b1151331"
   dependencies:
     highlight.js "^9.11.0"
     react-interactive "^0.6.5"
