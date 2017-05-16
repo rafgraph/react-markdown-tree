@@ -3009,9 +3009,9 @@ react-dom@^15.5.4:
     object-assign "^4.1.0"
     prop-types "~15.5.7"
 
-react-markdown-tree@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/react-markdown-tree/-/react-markdown-tree-0.1.0.tgz#6486a4a00f6e4a22f00b524528d08084817ca00e"
+react-markdown-tree@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/react-markdown-tree/-/react-markdown-tree-0.1.1.tgz#c5953f35400b8de2b9a2a6fd1996f993ee97ff3c"
   dependencies:
     commonmark "^0.27.0"
     commonmark-react-renderer "^4.3.2"
