@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "react-markdown-tree",
+  "name": "react-markdown-tree-example",
   "description": "Example site for React Markdown Tree",
   "scripts": {
     "start-local": "yarn link react-markdown-tree react-markdown-tree-config-default && yarn start",
@@ -17,7 +17,8 @@
   "license": "MIT",
   "dependencies": {
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-markdown-tree": "^0.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
