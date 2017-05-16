@@ -2,7 +2,7 @@
 
 [Live Example](http://react-markdown-tree.rafrex.com)
 
-React markdown component that renders markdown as customizable React components and *never* uses `dangerouslySetInnerHTML`.
+React Markdown Tree renders markdown as customizable React components and *never* uses `dangerouslySetInnerHTML`.
 - Renders markdown according to the [CommonMark spec](http://commonmark.org/) (powered by [`commonmark.js`](https://github.com/jgm/commonmark.js) and [`commonmark-react-renderer`](https://github.com/rexxars/commonmark-react-renderer)).
 - Create your own renderers as React components for custom styling or use [`react-markdown-tree-config-default`](https://github.com/rafrex/react-markdown-tree-config-default) for zero setup default styling with syntax highlighting.
 - Easy to use provider/child pattern - set the config once in `<MarkdownProvider>` and use `<Markdown>` anywhere in your app with zero props.
@@ -37,7 +37,7 @@ ReactDOM.render(
 
 
 ```js
-// App.js or any other component that is a child of App
+// App.js or any component that is a child of <MarkdownProvider>
 import { Markdown } from 'react-markdown-tree';
 ...
 
