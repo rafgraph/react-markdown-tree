@@ -1,7 +1,6 @@
 {
-  "private": true,
   "name": "react-markdown-tree",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Markdown provider and component for React",
   "main": "lib/index.js",
   "scripts": {
