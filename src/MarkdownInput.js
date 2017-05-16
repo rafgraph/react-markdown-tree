@@ -15,6 +15,11 @@ export default class MarkdownInput extends React.PureComponent {
   render() {
     const style = {
       ...this.props.style,
+      fontFamily: 'helvetica, sans-sarif',
+      fontSize: '15px',
+      letterSpacing: '0.5px',
+      lineHeight: '19px',
+      wordWrap: 'break-word',
       outline: 'none',
       resize: 'none',
       boxShadow: 'none',

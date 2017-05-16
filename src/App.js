@@ -7,7 +7,7 @@ const textBoxStyle = {
   border: 'none',
   boxSizing: 'border-box',
   margin: '0',
-  padding: '10px',
+  padding: '10px 18px',
   backgroundColor: '#F0F0F0',
   overflow: 'scroll',
   WebkitOverflowScrolling: 'touch',
