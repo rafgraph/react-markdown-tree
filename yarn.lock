@@ -3051,9 +3051,9 @@ react-interactive@^0.6.5:
     object-assign "^4.1.1"
     prop-types "^15.5.8"
 
-react-markdown-tree-config-default@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/react-markdown-tree-config-default/-/react-markdown-tree-config-default-0.3.0.tgz#887df876a3bade269b374d0dc08d64510d1a7403"
+react-markdown-tree-config-default@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/react-markdown-tree-config-default/-/react-markdown-tree-config-default-0.4.0.tgz#b28a055eef2339c39f74ae299df9d7efa084f548"
   dependencies:
     react-interactive "^0.6.5"
 

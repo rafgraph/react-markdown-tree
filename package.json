@@ -19,7 +19,7 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-markdown-tree": "^1.0.0",
-    "react-markdown-tree-config-default": "^0.3.0"
+    "react-markdown-tree-config-default": "^0.4.0"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
