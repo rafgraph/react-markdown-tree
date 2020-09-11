@@ -51,7 +51,7 @@ export default class MarkdownProvider extends React.Component {
     ...this.props.config.containerProps,
   };
 
-  componentWillReceiveProps(nextProps: {
+  UNSAFE_componentWillReceiveProps(nextProps: {
     config: { containerProps: {}, renderers: {} },
   }) {
     warning(
