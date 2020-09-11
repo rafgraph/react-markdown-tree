@@ -17,15 +17,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rafrex/react-markdown-tree.git"
+    "url": "git+https://github.com/rafgraph/react-markdown-tree.git"
   },
   "keywords": [
     "react"
   ],
-  "author": "Rafael Pedicini <code@rafrex.com>",
+  "author": "Rafael Pedicini <rafael@rafgraph.dev>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rafrex/react-markdown-tree/issues"
+    "url": "https://github.com/rafgraph/react-markdown-tree/issues"
   },
   "peerDependencies": {
     "react": ">=15"

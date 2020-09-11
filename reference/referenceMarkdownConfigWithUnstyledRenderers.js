@@ -10,7 +10,7 @@ import React from 'react';
 // to not allow a specific tag return null from its renderer
 
 // for default styled renderers see:
-// https://github.com/rafrex/react-markdown-tree-config-default
+// https://github.com/rafgraph/react-markdown-tree-config-default
 
 const Heading = (props: { level: number, children: any }) => {
   const H = `h${props.level}`;
@@ -32,7 +32,7 @@ const Image = (props: { src: string, alt: string, title?: string }) => {
 // tight prop is if the list items don't have blank lines between them
 // if a list is not tight then the contents are automatically wrapped in p tags
 // e.g. <li><p>rendered item of loose list</p></li>
-// see http://spec.commonmark.org/0.26/#lists for more info
+// see https://spec.commonmark.org/0.26/#lists for more info
 // you don't have to wrry about this in your renderer unless you want to
 // treat tight/loose lists differently (the p tags are already a part of children)
 const List = (props: {

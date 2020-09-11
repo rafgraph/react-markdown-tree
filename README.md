@@ -1,10 +1,10 @@
 # React Markdown Tree
 
-[Live Example](http://react-markdown-tree.rafrex.com)
+[Demo website](https://react-markdown-tree.rafgraph.dev) (demo code on [`gh-pages` branch](https://github.com/rafgraph/react-markdown-tree/tree/gh-pages))
 
 React Markdown Tree renders markdown as customizable React components and *never* uses `dangerouslySetInnerHTML`.
-- Renders markdown according to the [CommonMark spec](http://commonmark.org/) (powered by [`commonmark.js`](https://github.com/jgm/commonmark.js) and [`commonmark-react-renderer`](https://github.com/rexxars/commonmark-react-renderer)).
-- Create your own renderers as React components for custom styling or use [`react-markdown-tree-config-default`](https://github.com/rafrex/react-markdown-tree-config-default) for zero setup default styling with syntax highlighting.
+- Renders markdown according to the [CommonMark spec](https://commonmark.org/) (powered by [`commonmark.js`](https://github.com/jgm/commonmark.js) and [`commonmark-react-renderer`](https://github.com/rexxars/commonmark-react-renderer)).
+- Create your own renderers as React components for custom styling or use [`react-markdown-tree-config-default`](https://github.com/rafgraph/react-markdown-tree-config-default) for zero setup default styling with syntax highlighting.
 - Easy to use provider/child pattern - set the config once in `<MarkdownProvider>` and use `<Markdown>` anywhere in your app with zero props.
 
 ```shell
@@ -84,7 +84,7 @@ You can also use the UMD build that's available from Unpkg:
 - Not required, but if it is not provided unstyled html will be rendered
 - Object with keys for `renderers` and `containerProps`
 - Note that you can only set the config once when the `<MarkdownProvider>` is mounted, and you cannot change the config once it has been set.
-- For a reference config with unstyled renderers see [`referenceMarkdownConfigWithUnstyledRenderers.js`](https://github.com/rafrex/react-markdown-tree/blob/master/reference/referenceMarkdownConfigWithUnstyledRenderers.js)
+- For a reference config with unstyled renderers see [`referenceMarkdownConfigWithUnstyledRenderers.js`](https://github.com/rafgraph/react-markdown-tree/blob/main/reference/referenceMarkdownConfigWithUnstyledRenderers.js)
 ```js
 const config = {
   renderers: {
@@ -109,8 +109,3 @@ const config = {
   },
 };
 ```
-
-#### Publishing Custom Configs
-- Please create and publish custom configs on `npm` for others to use!
-- Publish under `react-markdown-tree-config-YOUR-CONFIG-NAME`
-- Let me know and I'll add them to the README
