@@ -1,11 +1,11 @@
 # React Markdown Tree
 
-[https://github.com/rafrex/react-markdown-tree](https://github.com/rafrex/react-markdown-tree 'GitHub Repo for React Markdown Tree')
+[https://github.com/rafgraph/react-markdown-tree](https://github.com/rafgraph/react-markdown-tree 'GitHub Repo for React Markdown Tree')
 
 ### Live example - type and see changes!
 
 - React Markdown Tree renders markdown as customizable React components and *never* uses `dangerouslySetInnerHTML`.
-- Use [`react-markdown-tree-config-default`](https://github.com/rafrex/react-markdown-tree-config-default) for zero setup default styling with syntax highlighting (or create your own renderers as React components for custom styling). The default config is used to render this example site.
+- Use [`react-markdown-tree-config-default`](https://github.com/rafgraph/react-markdown-tree-config-default) for zero setup default styling with syntax highlighting (or create your own renderers as React components for custom styling). The default config is used to render this example site.
 - Easy to use provider/child pattern - set the config once in `<MarkdownProvider>` and use `<Markdown>` anywhere in your app with zero props.
 
 ```shell
@@ -54,7 +54,7 @@ function MyComponent() {
 
 This is a paragraph of hipster text. Microdosing godard organic listicle kitsch, kale chips narwhal tousled jean shorts lumbersexual bespoke skateboard tacos swag. Church-key vinyl butcher austin leggings. Flannel hot chicken hexagon hella +1. Live-edge 8-bit glossier, butcher cardigan vinyl cold-pressed venmo. Meh letterpress XOXO lyft artisan af. Affogato woke microdosing jean shorts, polaroid XOXO enamel pin organic air plant taxidermy lo-fi fashion axe venmo. Offal pabst vape slow-carb.
 
-This is a [link to `react-markdown-tree-config-default`](https://github.com/rafrex/react-markdown-tree-config-default 'GitHub Repo for React Markdown Tree Config Default') that's used to style this markdown.
+This is a [link to `react-markdown-tree-config-default`](https://github.com/rafgraph/react-markdown-tree-config-default 'GitHub Repo for React Markdown Tree Config Default') that's used to style this markdown.
 
 Here's an image:
 ![React Logo](/imgs/react-logo.svg 'React Logo')
@@ -83,7 +83,7 @@ Here's an image:
 >
 > - List item
 >
-> This is a link to the [React Markdown Tree Repo](https://github.com/rafrex/react-markdown-tree)
+> This is a link to the [React Markdown Tree Repo](https://github.com/rafgraph/react-markdown-tree)
 >> This is a double BlockQuote
 >>> This is a triple BlockQuote
 >
@@ -116,6 +116,4 @@ Below is a thematic break
 
 ---
 
-Code and concept by [Rafael Pedicini](http://www.rafaelpedicini.com)
-
-[React Markdown Tree](https://github.com/rafrex/react-markdown-tree) is powered by [CommonMark JS](https://github.com/jgm/commonmark.js) and [CommonMark React Renderer](https://github.com/rexxars/commonmark-react-renderer)
+[React Markdown Tree](https://github.com/rafgraph/react-markdown-tree) is powered by [CommonMark JS](https://github.com/jgm/commonmark.js) and [CommonMark React Renderer](https://github.com/rexxars/commonmark-react-renderer)
