@@ -1,13 +1,7 @@
-// @flow
 import React from 'react';
 import { Markdown } from 'react-markdown-tree';
 
 export default class MarkdownOutput extends React.PureComponent {
-  props: {
-    text: string,
-    style: {},
-    layout: 'horizontal' | 'vertical',
-  };
   render() {
     const style = {
       ...this.props.style,
@@ -21,10 +15,6 @@ export default class MarkdownOutput extends React.PureComponent {
       style.height = 'calc(50% - 3px)';
     }
 
-    return (
-      <Markdown style={style}>
-        {this.props.text}
-      </Markdown>
-    );
+    return <Markdown style={style}>{this.props.text}</Markdown>;
   }
 }

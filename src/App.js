@@ -1,4 +1,3 @@
-// @flow
 import React from 'react';
 import MarkdownInput from './MarkdownInput';
 import MarkdownOutput from './MarkdownOutput';
@@ -14,14 +13,9 @@ const textBoxStyle = {
 };
 
 export default class App extends React.Component {
-  determineLayout = (mql: { matches: boolean }) =>
-    mql.matches ? 'horizontal' : 'vertical';
+  determineLayout = (mql) => (mql.matches ? 'horizontal' : 'vertical');
 
-  aspectRatioMql: {
-    matches: boolean,
-    addListener: Function,
-    removeListener: Function,
-  } = window.matchMedia('(min-aspect-ratio: 1/1)');
+  aspectRatioMql = window.matchMedia('(min-aspect-ratio: 1/1)');
 
   state = {
     text: '# Loading...',
@@ -33,7 +27,7 @@ export default class App extends React.Component {
 
     const _this = this;
     const request = new XMLHttpRequest();
-    request.addEventListener('load', function() {
+    request.addEventListener('load', function () {
       _this.updateInput(this.responseText);
     });
     request.addEventListener('error', () => {
@@ -50,11 +44,11 @@ export default class App extends React.Component {
     this.aspectRatioMql.removeListener(this.updateLayout);
   }
 
-  updateLayout = (mql: { matches: boolean }) => {
+  updateLayout = (mql) => {
     this.setState({ layout: this.determineLayout(mql) });
   };
 
-  updateInput = (text: string) => {
+  updateInput = (text) => {
     this.setState({ text });
   };
 

@@ -1,15 +1,7 @@
-// @flow
 import React from 'react';
 
 export default class MarkdownInput extends React.PureComponent {
-  props: {
-    updateInput: Function,
-    text: string,
-    style: {},
-    layout: 'horizontal' | 'vertical',
-  };
-
-  handleChange = (e: { target: { value: string } }) => {
+  handleChange = (e) => {
     this.props.updateInput(e.target.value);
   };
   render() {

@@ -6,8 +6,7 @@
     "start-local": "yarn link react-markdown-tree react-markdown-tree-config-default && yarn start",
     "start": "webpack-dev-server --devtool eval-source-map --host 0.0.0.0 --disable-host-check --history-api-fallback --open",
     "unlink": "yarn unlink react-markdown-tree react-markdown-tree-config-default && yarn add react-markdown-tree react-markdown-tree-config-default",
-    "build": "yarn run unlink && webpack -p",
-    "postinstall": "flow-typed install"
+    "build": "yarn run unlink && webpack -p"
   },
   "repository": {
     "type": "git",
@@ -16,10 +15,10 @@
   "author": "Rafael Pedicini <rafael@rafgraph.dev>",
   "license": "MIT",
   "dependencies": {
-    "react": "^16.3.0",
-    "react-dom": "^16.3.0",
-    "react-markdown-tree": "^1.0.3",
-    "react-markdown-tree-config-default": "^0.4.2"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-markdown-tree": "^2.0.0",
+    "react-markdown-tree-config-default": "^1.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
@@ -28,15 +27,11 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-env": "^1.4.0",
-    "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "^6.24.1",
     "eslint": "^3.19.0",
     "eslint-config-prettier": "^2.1.0",
-    "eslint-plugin-flowtype": "^2.33.0",
     "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-prettier": "^2.1.1",
     "eslint-plugin-react": "^7.0.1",
-    "flow-bin": "^0.46.0",
     "prettier": "^1.3.1",
     "webpack": "^2.5.0",
     "webpack-dev-server": "^2.11.5"
