@@ -7,11 +7,9 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
-    'plugin:flowtype/recommended',
     'plugin:react/recommended',
     'plugin:import/errors',
     'prettier',
-    'prettier/flowtype',
     'prettier/react',
   ],
   parserOptions: {
@@ -22,9 +20,8 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ['flowtype', 'react', 'import', 'prettier'],
+  plugins: ['react', 'import'],
   rules: {
     'import/no-unresolved': ['error', { ignore: ['^react$'] }], // because React is a peer dependency
-    'prettier/prettier': ['warn', { trailingComma: 'all', singleQuote: true }],
   },
 };

@@ -1,66 +1,97 @@
-// @flow
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // unstyled reference markdown renderers
-// the props they receive are provided as flow types for reference
-// but you do not need to to use flow when creating your renderers
-
 // all renderers are optional (if not provided, an unstyled renderer is used)
 // all renderers must return a ReactElement or null
 // to not allow a specific tag return null from its renderer
 
-// for default styled renderers see:
+// for a set of styled renderers see:
 // https://github.com/rafgraph/react-markdown-tree-config-default
 
-const Heading = (props: { level: number, children: any }) => {
+const Heading = (props) => {
   const H = `h${props.level}`;
   return <H>{props.children}</H>;
 };
+Heading.propTypes = {
+  level: PropTypes.number.isRequired,
+  children: PropTypes.node,
+};
 
-const Paragraph = (props: { children: any }) => {
+const Paragraph = (props) => {
   return <p>{props.children}</p>;
 };
-
-const Link = (props: { href: string, title?: string, children: any }) => {
-  return <a href={props.href} title={props.title}>{props.children}</a>;
+Paragraph.propTypes = {
+  children: PropTypes.node,
 };
 
-const Image = (props: { src: string, alt: string, title?: string }) => {
+const Link = (props) => {
+  return (
+    <a href={props.href} title={props.title}>
+      {props.children}
+    </a>
+  );
+};
+Link.propTypes = {
+  href: PropTypes.string,
+  title: PropTypes.string,
+  children: PropTypes.node,
+};
+
+const Image = (props) => {
   return <img src={props.src} alt={props.alt} title={props.title} />;
+};
+Image.propTypes = {
+  src: PropTypes.string,
+  alt: PropTypes.string,
+  title: PropTypes.string,
 };
 
 // tight prop is if the list items don't have blank lines between them
 // if a list is not tight then the contents are automatically wrapped in p tags
 // e.g. <li><p>rendered item of loose list</p></li>
 // see https://spec.commonmark.org/0.26/#lists for more info
-// you don't have to wrry about this in your renderer unless you want to
+// you don't have to worry about this in your renderer unless you want to
 // treat tight/loose lists differently (the p tags are already a part of children)
-const List = (props: {
-  type: 'ordered' | 'bullet',
-  start?: number,
-  tight: boolean,
-  children: any,
-}) => {
+const List = (props) => {
   if (props.type === 'ordered') {
     return <ol start={props.start}>{props.children}</ol>;
   }
   return <ul>{props.children}</ul>;
 };
+List.propTypes = {
+  type: PropTypes.oneOf(['ordered', 'bullet']).isRequired,
+  start: PropTypes.number,
+  tight: PropTypes.bool,
+  children: PropTypes.node,
+};
 
-const Item = (props: { children: any }) => {
+const Item = (props) => {
   return <li>{props.children}</li>;
 };
+Item.propTypes = {
+  children: PropTypes.node,
+};
 
-const BlockQuote = (props: { children: any }) => {
+const BlockQuote = (props) => {
   return <blockquote>{props.children}</blockquote>;
 };
-
-const Emph = (props: { children: any }) => {
-  return <em>{props.children}</em>;
+BlockQuote.propTypes = {
+  children: PropTypes.node,
 };
 
-const Strong = (props: { children: any }) => {
+const Emph = (props) => {
+  return <em>{props.children}</em>;
+};
+Emph.propTypes = {
+  children: PropTypes.node,
+};
+
+const Strong = (props) => {
   return <strong>{props.children}</strong>;
+};
+Strong.propTypes = {
+  children: PropTypes.node,
 };
 
 const Softbreak = () => {
@@ -79,12 +110,19 @@ const ThematicBreak = () => {
   return <hr />;
 };
 
-const Code = (props: { literal: string }) => {
+const Code = (props) => {
   return <code>{props.literal}</code>;
 };
+Code.propTypes = {
+  literal: PropTypes.string,
+};
 
-const CodeBlock = (props: { literal: string, language?: string }) => {
+const CodeBlock = (props) => {
   return <pre>{props.literal}</pre>;
+};
+CodeBlock.propTypes = {
+  literal: PropTypes.string,
+  language: PropTypes.string,
 };
 
 export default {
